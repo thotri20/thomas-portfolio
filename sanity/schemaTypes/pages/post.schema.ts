@@ -7,19 +7,11 @@ export const postType = defineType({
     name: "article",
     title: "Article",
     icon: Newspaper,
-    groups: [
-        {
-            name: "general",
-            title: "General",
-            default: true,
-        },
-    ],
     fields: [
         {
             name: "title",
             type: "string",
             title: "Title",
-            group: "general",
             description: "Tittel til siden"
         },
         {
@@ -33,7 +25,6 @@ export const postType = defineType({
         {
             name: "mainImage",
             title: "Hoved bilde",
-            group: "general",
             type: "image",
             description: "Hovedbilde for post"
         },
@@ -41,14 +32,12 @@ export const postType = defineType({
 			name: 'content',
 			type: 'richText',
 			title: 'Content',
-			group: 'general',
 		},
         {
             name: 'publishedAt',
             type: 'datetime',
             title: 'Publisert',
             description: 'Dato for publisering av artikkelen',
-            group: 'byline',
             initialValue: new Date().toISOString(),
             validation: (Rule) => Rule.required(),
         },
