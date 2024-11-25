@@ -1,4 +1,5 @@
 import { POST_BY_SLUG } from "@/common/queries/pages/post.queries";
+import PostView from "@/common/view/post-view";
 import { sanityFetch } from "@/sanity/lib/live";
 import { notFound } from "next/navigation";
 
@@ -26,9 +27,7 @@ export default async function PostPage(props: Props) {
 
   return (
     <>
-    <pre>
-        {JSON.stringify(data, undefined, 2)}
-    </pre>
+        <PostView data={data.data} />
     </>
   );
 }
