@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Home } from "../types/pages/home.types";
 import { urlFor } from "@/sanity/lib/image";
+import PortableText from "../atoms/content/PortableText";
 
 
 
@@ -15,6 +16,10 @@ export default function HomeView({ data }: { data: Home }) {
                 height={500}
                 width={500}
             />
+
+            <div className="prose prose-xl">
+                <PortableText value={data.entry} />
+            </div>
         </div>
     )
 }

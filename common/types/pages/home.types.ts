@@ -1,3 +1,4 @@
+import { SanityRichtTextType } from "../root.types";
 
 
 export type Home = {
@@ -5,5 +6,6 @@ export type Home = {
     _type: "home";
     title: string;
     image: any;
+    entry: SanityRichtTextType;
     //TODO: LEGG TIL FLERE TYPES
 }
