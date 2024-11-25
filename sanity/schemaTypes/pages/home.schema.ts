@@ -7,32 +7,30 @@ export const homepage = defineType({
     type: "document",
     title: "Hjemmeside",
     icon: Home, 
-    groups: [
-        {
-            name: "general",
-            title: "General",
-            default: true,
-        },
-    ],
     fields: [
         {
             name: "title",
             title: "Tittel",
             type: "string",
-            group: "general"
         },
         {
             name: "entry",
             title: "Beskrivelse",
             description: "Liten beskrivelse av deg",
-            type: "simpleRichText",
-            group: "general"
+            type: "richText",
         },
         {
             name: "image",
             type: "image",
             title: "Hovedbildet",
             description: "Hovedbildet til hjemmeside",
+            fields: [
+                {
+                    name: "alt",
+                    type: "string",
+                    description: "Alternativ tekst / For folk som har l rizz å ikke klarer å se"
+                }
+            ],
             options: {
                 hotspot: true,
             },

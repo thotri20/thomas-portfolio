@@ -4,5 +4,5 @@ import { externalLink, richText, simpleRichText } from './objects/rich-text.sche
 import { homepage } from './pages/home.schema'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [postType, richText, homepage, simpleRichText, externalLink],
+  types: [postType, richText, simpleRichText, externalLink, homepage],
 }
