@@ -4,8 +4,8 @@ import { Newspaper } from "lucide-react";
 
 export const postType = defineType({
     type: "document",
-    name: "article",
-    title: "Article",
+    name: "post",
+    title: "Post",
     icon: Newspaper,
     fields: [
         {
