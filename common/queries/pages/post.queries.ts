@@ -8,5 +8,6 @@ export const POST_BY_SLUG = groq`*[_type == "post" && slug.current == $slug][0] 
         "url": asset -> url,
         alt,
     },
+    content,
     publishedAt,
 }`

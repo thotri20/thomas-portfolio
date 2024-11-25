@@ -16,7 +16,7 @@ export const structure: StructureResolver = (S) =>
 								.schemaType('home')
 								.documentId("home"),
 						),
-      S.listItem().id("post").schemaType("post").title("Prosjekter"),
+      S.documentTypeListItem("post").schemaType("post").title("Prosjekter"),
     ])
 
 

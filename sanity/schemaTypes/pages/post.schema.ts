@@ -26,7 +26,13 @@ export const postType = defineType({
             name: "mainImage",
             title: "Hoved bilde",
             type: "image",
-            description: "Hovedbilde for post"
+            description: "Hovedbilde for post",
+            fields: [
+                {
+                    name: "alt",
+                    type: "string",
+                }
+            ]
         },
         {
 			name: 'content',

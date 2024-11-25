@@ -1,3 +1,4 @@
+import { SanityRichtTextType } from "../root.types";
 
 
 export type Post = {
@@ -5,5 +6,5 @@ export type Post = {
     _type: "post";
     title: string;
     mainImage: any;
-    //TODO: LEGG TIL FLERE TYPES
+    content: SanityRichtTextType;
 }
