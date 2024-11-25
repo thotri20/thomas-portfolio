@@ -1,5 +1,5 @@
 import { type ArrayOfType, defineField, defineType } from 'sanity';
-import { SquareArrowUp, Text } from 'lucide-react';
+import { SquareArrowUp, SquareSplitHorizontal, Text } from 'lucide-react';
 import { LI } from '@/common/atoms/icon';
 
 export const getDefaultBlockSetup = ({
@@ -44,7 +44,7 @@ export const externalLink = defineField({
 	name: 'externalLink',
 	type: 'object',
 	title: 'Ekstern lenke',
-	icon: LI(SquareArrowUp),
+	icon: LI(SquareArrowUp), //wrapper ikonet i li fordi ellers blir ikonet for stort
 	fields: [
 		{
 			name: 'href',
@@ -74,7 +74,7 @@ export const externalLink = defineField({
 export const richText = defineType({
 	name: 'richText',
 	type: 'array',
-	icon: Text,
+	icon: LI(Text), //wrapper ikonet i li fordi ellers blir ikonet for stort
 	of: [
 		...getDefaultBlockSetup({
 			headingLevels: ['h1', 'h2', 'h3', 'h4', 'h5'],
@@ -88,7 +88,7 @@ export const simpleRichText = defineType({
 	name: 'simpleRichText',
 	type: 'array',
 	// @ts-ignore
-	icon: LI(Text),
+	icon: LI(Text), //wrapper ikonet i li fordi ellers blir ikonet for stort
 	of: [...getDefaultBlockSetup({})],
 });
 
@@ -97,7 +97,7 @@ export const imageAndTextBlock = defineField({
 	title: 'Bilde og tekst blokk',
 	name: 'imageAndTextBlock',
 	// @ts-ignore
-	icon: SquareSplitHorizontal,
+	icon: LI(SquareSplitHorizontal), //wrapper ikonet i li fordi ellers blir ikonet for stort
 	fields: [
         {
             name: "image",
