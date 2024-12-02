@@ -1,4 +1,5 @@
 import { SanityRichtTextType } from "../root.types";
+import { Project } from "./post.types";
 
 
 export type Home = {
@@ -7,5 +8,5 @@ export type Home = {
     title: string;
     image: any;
     entry: SanityRichtTextType;
-    //TODO: LEGG TIL FLERE TYPES
+    project: Project[];
 }

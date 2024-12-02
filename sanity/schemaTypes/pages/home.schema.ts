@@ -34,6 +34,17 @@ export const homepage = defineType({
             options: {
                 hotspot: true,
             },
+        },
+        {
+            name: "project",
+            type: "array",
+            title: "PROSJEKTER",
+            of: [
+                {
+                    type: "reference",
+                    to: [{ type: "post"}]
+                }
+            ]
         }
     ]
 })

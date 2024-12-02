@@ -8,3 +8,10 @@ export type Post = {
     mainImage: any;
     content: SanityRichtTextType;
 }
+
+export type Project = {
+    title: string;
+    slug: string;
+    mainImage: any;
+    content: any;
+}
